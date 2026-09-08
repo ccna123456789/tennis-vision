@@ -1,0 +1,30 @@
+# Configuration par defaut. Les chemins sont relatifs a la racine du projet.
+
+video: data/input/match.mp4
+calibration: configs/calibration.json
+
+models:
+  # Deux joueurs bien visibles sur un court : le plus petit modele suffit.
+  players: yolov8n.pt
+  player_confidence: 0.25
+
+  # La balle est le cas difficile. Voir la section Results du README pour la
+  # comparaison chiffree qui justifie ce couple modele / seuil.
+  ball: yolov8x.pt
+  ball_confidence: 0.05
+
+analysis:
+  # Ecart, en frames, entre deux mesures de position. Trop court, le bruit de
+  # detection domine le deplacement reel.
+  sample_step: 5
+  # Absence maximale, en frames, que l'on accepte de combler par interpolation.
+  max_ball_gap: 6
+
+paths:
+  cache: data/cache
+  output_video: data/output/analysis.avi
+  output_report: data/output/report.json
+
+# Nombre de frames traitees. null = video entiere.
+# L'inference tourne sur processeur : commencez petit.
+max_frames: 90

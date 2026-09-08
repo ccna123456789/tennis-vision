@@ -1,0 +1,5 @@
+ultralytics>=8.0.0      # detection YOLO et suivi ByteTrack
+opencv-python>=4.8.0    # video, homographie, rendu
+numpy>=1.24.0           # algebre lineaire, coordonnees homogenes
+PyYAML>=6.0             # lecture de la configuration
+pytest>=7.0.0           # tests

@@ -1,0 +1,31 @@
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Poids de modeles : telecharges automatiquement
+*.pt
+*.pth
+
+# Donnees generees
+data/cache/
+data/output/
+
+# Videos : non versionnees, voir docs/DATA.md
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Calibration : propre a chaque video et angle de camera
+configs/calibration.json
+
+# OS
+.DS_Store
+Thumbs.db
